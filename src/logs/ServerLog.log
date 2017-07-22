@@ -1,0 +1,26 @@
+=== Started 2017-07-22T23-51-40-883 ===
+[INFO ][23:51:40] [1m[32mVOgar 1.3.5[37m - Valdex Servers[0m
+[INFO ][23:51:40] 0 IP ban records loaded.
+[WARN ][23:51:40] User account "Local Administrator" disabled
+[WARN ][23:51:40] User account "Local Moderator" disabled
+[WARN ][23:51:40] User account "Local User" disabled
+[INFO ][23:51:40] 0 user records loaded.
+[INFO ][23:51:40] 25 bad words loaded
+[WARN ][23:51:40] TLS: not supported (SSL certificate not found!)
+[INFO ][23:51:40] WebSocket: ws
+[INFO ][23:51:40] [1m[32mCrazy 1 
+[INFO ][23:51:40] Started stats server on port 88
+[INFO ][23:51:40] Listening on port 3000
+[INFO ][23:51:40] Current game mode is Experimental
+[INFO ][23:51:40] Added 10 player bots
+[NONE ][23:51:43]  Player has joined the server!
+[NONE ][23:51:43] CONNECTED    192.168.137.129:34320, origin: "undefined"
+[INFO ][23:51:43] Added 5 minions
+[NONE ][23:52:04] >minion 1 15
+[NONE ][23:52:04] Added 15 minions for <birthday_lol✅�
+[NONE ][23:55:00] DISCONNECTED 192.168.137.129:34320, code: 1000, reason: "", name: "VArmy"
+[NONE ][23:55:03]  Player has joined the server!
+[NONE ][23:55:03] CONNECTED    192.168.137.129:34321, origin: "undefined"
+[INFO ][23:55:03] Added 5 minions
+[NONE ][23:59:20] >minion 1 15
+[NONE ][23:59:20] Added 15 minions for <birthday_lol✅�
