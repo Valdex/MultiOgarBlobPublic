@@ -345,7 +345,7 @@ PlayerTracker.prototype.sendUpdate = function () {
         }
         var node = this.viewNodes[newIndex];
         // skip food & eject if no moving
-        if (node.isMoving || (node.cellType != 1 && node.cellType != 3))
+        if (node.isMoving && node.cellType == 3)
             updNodes.push(node);
         newIndex++;
         oldIndex++;
