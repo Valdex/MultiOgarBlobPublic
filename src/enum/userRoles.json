@@ -1,7 +1,7 @@
 [
     { 
-        "ip":"", 
-        "password":"ini",
+        "ip":"127.0.0.1", 
+        "password":"",
         "role":"ADMIN",
         "name":"Local Administrator" 
     },

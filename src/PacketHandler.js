@@ -75,9 +75,9 @@ PacketHandler.prototype.handshake_onCompleted = function (protocol, key) {
     this.protocol = protocol;
     // Send handshake response
     this.socket.sendPacket(new Packet.ClearAll());
-    this.socket.sendPacket(new Packet.SetBorder(this.socket.playerTracker, this.gameServer.border, this.gameServer.config.serverGamemode, "VOgar " + pjson.version));
+    this.socket.sendPacket(new Packet.SetBorder(this.socket.playerTracker, this.gameServer.border, this.gameServer.config.serverGamemode, "MultiOgar-Edited " + pjson.version));
     // Send welcome message
-    this.gameServer.sendChatMessage(null, this.socket.playerTracker, "VOgar " + pjson.version);
+    this.gameServer.sendChatMessage(null, this.socket.playerTracker, "MultiOgar-Edited " + pjson.version);
     if (this.gameServer.config.serverWelcome1)
         this.gameServer.sendChatMessage(null, this.socket.playerTracker, this.gameServer.config.serverWelcome1);
     if (this.gameServer.config.serverWelcome2)
@@ -121,19 +121,28 @@ PacketHandler.prototype.message_onMouse = function (message) {
 };
 
 PacketHandler.prototype.message_onKeySpace = function (message) {
-    // minion split
-    var player = this.socket.playerTracker;
-    if (player.miQ == 1 && player.minionControl) {
-        for (var i in this.gameServer.clients) {
-            var client = this.gameServer.clients[i].playerTracker;
-            if (client.isMi && client.owner == player) {
-                this.gameServer.splitCells(client);
+
+    if (message.length === 1 || message.length === 2) {
+        var splitCount = message[1];
+        if (splitCount) {
+            for (var i = 0; i < splitCount; i++) {
+                this.socket.playerTracker.pressSpace();
             }
+        } else {
+            this.socket.playerTracker.pressSpace();
         }
-    // player split
     } else {
-        this.pressSpace = true;
+        return
     }
+	/*
+    var tick = this.gameServer.getTick();
+    var dt = tick - this.lastSpaceTick;
+    if (dt < this.gameServer.config.ejectCooldown) {
+        return;
+    }
+    this.lastSpaceTick = tick;
+	
+    this.pressSpace = true;*/
 };
 
 PacketHandler.prototype.message_onKeyQ = function (message) {

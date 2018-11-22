@@ -69,7 +69,7 @@ Teams.prototype.onServerInit = function (gameServer) {
         client.setColor(this.getTeamColor(client.team));
         for (var j = 0; j < client.cells.length; j++) {
             var cell = client.cells[j];
-            cell.setColor(client.color);
+            cell.setColor(client.getColor());
             this.nodes[client.team].push(cell);
         }
     }
@@ -82,32 +82,32 @@ Teams.prototype.onPlayerInit = function (player) {
 
 Teams.prototype.onCellAdd = function (cell) {
     // Add to team list
-    this.nodes[cell.owner.team].push(cell);
+    this.nodes[cell.owner.getTeam()].push(cell);
 };
 
 Teams.prototype.onCellRemove = function (cell) {
     // Remove from team list
-    var index = this.nodes[cell.owner.team].indexOf(cell);
+    var index = this.nodes[cell.owner.getTeam()].indexOf(cell);
     if (index != -1) {
-        this.nodes[cell.owner.team].splice(index, 1);
+        this.nodes[cell.owner.getTeam()].splice(index, 1);
     }
 };
 
 Teams.prototype.onCellMove = function (cell, gameServer) {
-    var team = cell.owner.team;
-    var r = cell._size;
+    var team = cell.owner.getTeam();
+    var r = cell.getSize();
     
     // Find team
     for (var i = 0; i < cell.owner.visibleNodes.length; i++) {
         // Only collide with player cells
         var check = cell.owner.visibleNodes[i];
         
-        if ((check.cellType != 0) || (cell.owner == check.owner)) {
+        if ((check.getType() != 0) || (cell.owner == check.owner)) {
             continue;
         }
         
         // Collision with teammates
-        if (check.owner.team == team) {
+        if (check.owner.getTeam() == team) {
             
             var manifold = gameServer.checkCellCollision(cell, check); // Calculation info
             if (manifold != null) { // Collided
@@ -135,8 +135,8 @@ Teams.prototype.updateLB = function (gameServer) {
                 continue;
             }
             
-            teamMass[i] += cell._mass;
-            total += cell._mass;
+            teamMass[i] += cell.getMass();
+            total += cell.getMass();
         }
     }
     // No players

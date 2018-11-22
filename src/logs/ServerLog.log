@@ -1,26 +1,20 @@
-=== Started 2017-07-22T23-51-40-883 ===
-[INFO ][23:51:40] [1m[32mVOgar 1.3.5[37m - Valdex Servers[0m
-[INFO ][23:51:40] 0 IP ban records loaded.
-[WARN ][23:51:40] User account "Local Administrator" disabled
-[WARN ][23:51:40] User account "Local Moderator" disabled
-[WARN ][23:51:40] User account "Local User" disabled
-[INFO ][23:51:40] 0 user records loaded.
-[INFO ][23:51:40] 25 bad words loaded
-[WARN ][23:51:40] TLS: not supported (SSL certificate not found!)
-[INFO ][23:51:40] WebSocket: ws
-[INFO ][23:51:40] [1m[32mCrazy 1 
-[INFO ][23:51:40] Started stats server on port 88
-[INFO ][23:51:40] Listening on port 3000
-[INFO ][23:51:40] Current game mode is Experimental
-[INFO ][23:51:40] Added 10 player bots
-[NONE ][23:51:43]  Player has joined the server!
-[NONE ][23:51:43] CONNECTED    192.168.137.129:34320, origin: "undefined"
-[INFO ][23:51:43] Added 5 minions
-[NONE ][23:52:04] >minion 1 15
-[NONE ][23:52:04] Added 15 minions for <birthday_lol✅�
-[NONE ][23:55:00] DISCONNECTED 192.168.137.129:34320, code: 1000, reason: "", name: "VArmy"
-[NONE ][23:55:03]  Player has joined the server!
-[NONE ][23:55:03] CONNECTED    192.168.137.129:34321, origin: "undefined"
-[INFO ][23:55:03] Added 5 minions
-[NONE ][23:59:20] >minion 1 15
-[NONE ][23:59:20] Added 15 minions for <birthday_lol✅�
+=== Started 2018-11-22T16-59-45-385 ===
+[INFO ][16:59:45] [1m[32mMultiOgar 1.3.5[37m - An open source multi-protocol ogar server[0m
+[INFO ][16:59:45] 0 IP ban records loaded.
+[WARN ][16:59:45] User account "Local Administrator" disabled
+[WARN ][16:59:45] User account "Local Moderator" disabled
+[WARN ][16:59:45] User account "Local User" disabled
+[INFO ][16:59:45] 0 user records loaded.
+[INFO ][16:59:45] 25 bad words loaded
+[WARN ][16:59:45] TLS: not supported (SSL certificate not found!)
+[INFO ][16:59:45] WebSocket: ws
+[INFO ][16:59:45] Started stats server on port 88
+[INFO ][16:59:45] Listening on port 5515
+[INFO ][16:59:45] Current game mode is FFA
+[INFO ][16:59:45] Added 10 player bots
+[NONE ][17:00:23]  Player has joined the server!
+[NONE ][17:00:23] CONNECTED    192.168.1.127:56502, origin: "undefined"
+[INFO ][17:00:23] Added 5 minions
+[NONE ][17:00:34] >minion 11 15
+[NONE ][17:00:34] Added 15 minions for Valdex_
+[NONE ][17:23:56] DISCONNECTED 192.168.1.127:56502, code: 1000, reason: "", name: "Valdex_"

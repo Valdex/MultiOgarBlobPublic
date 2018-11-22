@@ -3,8 +3,9 @@ module.exports = {
     FFA: require('./FFA'),
     Teams: require('./Teams'),
     Experimental: require('./Experimental'),
-    Rainbow: require('./Rainbow'),
-    LMS: require('./LMS'),
+    InstantMerge: require('./InstantMerge'),
+    Crazy: require('./Crazy'),
+    SelfFeed: require('./SelfFeed'),
 };
 
 var get = function (id) {
@@ -16,12 +17,15 @@ var get = function (id) {
         case 2: // Experimental
             mode = new module.exports.Experimental();
             break;
-        case 3: // Rainbow
-            mode = new module.exports.Rainbow();
+        case 3: // InstantMerge
+            mode = new module.exports.InstantMerge();
             break;
-        case 4: // Last Man Standing
-         	mode = new module.exports.LMS();
-         	break;
+        case 4: // Crazy
+            mode = new module.exports.Crazy();
+            break;
+        case 5:// SelfFeed
+            mode = new module.exports.SelfFeed();
+            break;
         default: // FFA is default
             mode = new module.exports.FFA();
             break;

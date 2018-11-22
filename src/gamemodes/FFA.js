@@ -4,7 +4,7 @@ function FFA() {
     Mode.apply(this, Array.prototype.slice.call(arguments));
     
     this.ID = 0;
-    this.name = "Free For All";
+    this.name = "FFA";
     this.specByLeaderboard = true;
 }
 
