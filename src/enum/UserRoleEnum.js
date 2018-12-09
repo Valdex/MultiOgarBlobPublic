@@ -8,6 +8,6 @@
 }
 
 define("GUEST", 0);
-define("USER", 1);
+define("ADMIN", 1);
 define("MODER", 2);
 define("ADMIN", 4);
